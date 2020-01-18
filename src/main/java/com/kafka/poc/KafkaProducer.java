@@ -20,9 +20,9 @@ public class KafkaProducer implements ApplicationRunner {
     private final KafkaTemplate<Person, Address> kafka;
     private final Fairy fairy = Fairy.create(Locale.US);
 
-    @Value("${de.codecentric.sbkaavro.topic}")
+    @Value("${kakfa-avro-poc.topic}")
     private String topic;
-    @Value("${de.codecentric.sbkaavro.records}")
+    @Value("${kakfa-avro-poc.records}")
     private Integer numRecords = 1;
 
     public KafkaProducer(

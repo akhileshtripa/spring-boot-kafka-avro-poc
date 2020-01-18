@@ -15,14 +15,14 @@ public class KafkaConsumer {
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaConsumer.class);
     private final KafkaListenerEndpointRegistry registry;
 
-    @Value("${de.codecentric.sbkaavro.records}")
+    @Value("${kakfa-avro-poc.records}")
     private Integer numRecords = 1;
 
     public KafkaConsumer(KafkaListenerEndpointRegistry registry) {
         this.registry = registry;
     }
 
-    @KafkaListener(topics = {"${de.codecentric.sbkaavro.topic}"})
+    @KafkaListener(topics = {"${kakfa-avro-poc.topic}"})
     public void receive(ConsumerRecord<Person, Address> consumerRecord) {
         Person person = consumerRecord.key();
         Address address = consumerRecord.value();

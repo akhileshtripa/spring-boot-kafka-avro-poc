@@ -18,7 +18,7 @@ import java.util.stream.IntStream;
 public class KafkaProducer implements ApplicationRunner {
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaProducer.class);
     private final KafkaTemplate<Person, Address> kafka;
-    private final Fairy fairy = Fairy.create(Locale.GERMANY);
+    private final Fairy fairy = Fairy.create(Locale.US);
 
     @Value("${de.codecentric.sbkaavro.topic}")
     private String topic;

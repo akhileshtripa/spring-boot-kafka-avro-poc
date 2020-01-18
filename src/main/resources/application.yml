@@ -15,5 +15,5 @@ spring.kafka:
       value-serializer: "io.confluent.kafka.serializers.KafkaAvroSerializer"
 
 kakfa-avro-poc:
-  topic: "persons"
+  topic: "persons-topic"
   records: 5
